@@ -18,6 +18,9 @@ import BLOG from '@/blog.config'
 import ExternalPlugins from '@/components/ExternalPlugins'
 import GlobalHead from '@/components/GlobalHead'
 
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 /**
  * App挂载DOM 入口文件
  * @param {*} param0
@@ -53,6 +56,8 @@ const MyApp = ({ Component, pageProps }) => {
         <Component {...pageProps} />
       </GLayout>
       <ExternalPlugins {...pageProps} />
+      <Analytics />
+      <SpeedInsights />
     </GlobalContextProvider>
   )
 }
