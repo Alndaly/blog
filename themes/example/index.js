@@ -182,7 +182,7 @@ const LayoutSlug = props => {
         <div id='article-wrapper'>
           <PostMeta post={post} />
           <NotionPage post={post} />
-          <ShareBar post={post} />
+          {/* <ShareBar post={post} /> */}
           <Comment frontMatter={post} />
         </div>
       )}
