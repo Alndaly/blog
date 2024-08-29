@@ -57,7 +57,7 @@ const LayoutBase = props => {
       <div id='container-inner' className='w-full relative z-10'>
         <div
           id='container-wrapper'
-          className={`relative mx-auto justify-center md:flex py-8 px-2
+          className={`relative mx-auto justify-center md:flex mb-8 px-3
           ${LAYOUT_SIDEBAR_REVERSE ? 'flex-row-reverse' : ''} 
           ${LAYOUT_VERTICAL ? 'items-center flex-col' : 'items-start'} 
           `}>
