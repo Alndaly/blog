@@ -12,7 +12,7 @@ import { HashTag } from '@/components/HeroIcons'
 import LazyImage from '@/components/LazyImage'
 import replaceSearchResult from '@/components/Mark'
 import NotionPage from '@/components/NotionPage'
-import ShareBar from '@/components/ShareBar'
+// import ShareBar from '@/components/ShareBar'
 import WWAds from '@/components/WWAds'
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
@@ -305,7 +305,7 @@ const LayoutSlug = props => {
               <PostAdjacent {...props} />
 
               {/* 分享 */}
-              <ShareBar post={post} />
+              {/* <ShareBar post={post} /> */}
               {post?.type === 'Post' && (
                 <div className='px-5'>
                   {/* 版权 */}
