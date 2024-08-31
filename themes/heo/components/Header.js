@@ -75,7 +75,8 @@ const Header = props => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
           const currentScrollY = window.scrollY
-          if (currentScrollY > prevScrollY) {
+          // >0的目的是为了防止浏览器滑动到顶部时的自动回弹
+          if (currentScrollY > prevScrollY && currentScrollY > 0) {
             setActiveIndex(1) // 向下滚动时设置activeIndex为1
           } else {
             setActiveIndex(0) // 向上滚动时设置activeIndex为0
@@ -158,9 +159,12 @@ const Header = props => {
             </div>
             <div
               className={`absolute transition-all duration-700 ${activeIndex === 1 ? 'opacity-100 mb-0' : '-mb-20 opacity-0 invisible'}`}>
-              <h1 className='font-bold text-center text-light-400 dark:text-gray-400'>
-                {siteConfig('AUTHOR') || siteConfig('TITLE')}{' '}
-                {siteConfig('BIO') && <>|</>} {siteConfig('BIO')}
+              <h1 className='font-bold text-center text-light-400 dark:text-gray-400 flex flex-row gap-2'>
+                {siteConfig('AUTHOR') || siteConfig('TITLE')}
+                {siteConfig('BIO') && <div>|</div>}
+                <div className='line-clamp-1'>
+                  {siteConfig('BIO')}
+                </div>
               </h1>
             </div>
           </div>

@@ -50,7 +50,7 @@ export default function SideRight(props) {
         {/* 最新文章列表 */}
         <div
           className={
-            'border hover:border-indigo-600  dark:hover:border-yellow-600 duration-200 dark:border-gray-700 dark:bg-[#1e1e1e] dark:text-white rounded-xl lg:p-6 p-4 hidden lg:block bg-white'
+            'border hover:border-indigo-600  dark:hover:border-yellow-600 duration-200 dark:border-gray-700 dark:bg-[#1e1e1e] dark:text-white rounded-xl lg:p-4 p-2 hidden lg:block bg-white'
           }>
           <LatestPostsGroupMini {...props} />
         </div>

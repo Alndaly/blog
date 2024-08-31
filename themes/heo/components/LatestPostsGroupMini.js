@@ -22,7 +22,7 @@ export default function LatestPostsGroupMini({ latestPosts, siteInfo }) {
 
   return (
     <>
-      <div className=' mb-2 px-1 flex flex-nowrap justify-between'>
+      <div className='mb-2 flex flex-nowrap justify-between'>
         <div>
           <i className='mr-2 fas fas fa-history' />
           {locale.COMMON.LATEST_POSTS}
@@ -41,8 +41,8 @@ export default function LatestPostsGroupMini({ latestPosts, siteInfo }) {
             title={post.title}
             href={post?.href}
             passHref
-            className={'my-3 flex'}>
-            <div className='w-20 h-14 overflow-hidden relative'>
+            className={'p-1 my-3 flex'}>
+            <div className='w-10 h-10 overflow-hidden relative'>
               <LazyImage
                 src={`${headerImage}`}
                 className='object-cover w-full h-full rounded-lg'
@@ -51,12 +51,11 @@ export default function LatestPostsGroupMini({ latestPosts, siteInfo }) {
             <div
               className={
                 (selected ? ' text-indigo-400 ' : 'dark:text-gray-200') +
-                ' text-sm overflow-x-hidden hover:text-indigo-600 px-2 duration-200 w-full rounded ' +
-                ' hover:text-indigo-400 dark:hover:text-yellow-600 cursor-pointer items-center flex'
+                ' text-sm overflow-x-hidden px-2 duration-200 w-full rounded hover:text-indigo-400 dark:hover:text-yellow-600 cursor-pointer items-center flex flex-1'
               }>
               <div>
-                <div className='line-clamp-2 menu-link'>{post.title}</div>
-                <div className='text-gray-400'>{post.lastEditedDay}</div>
+                <div className='line-clamp-1 menu-link font-bold'>{post.title}</div>
+                <div className='text-gray-400 text-xs'>{post.lastEditedDay}</div>
               </div>
             </div>
           </Link>
